@@ -22,8 +22,6 @@ body{
 
 .container{
     width: 100vw;
-    height: 100vh;
-
     display: grid;
     justify-items: center;
     align-items: center;
@@ -43,9 +41,12 @@ body{
 }
 
 .card__img{
-    background-image: linear-gradient(#a33ede90, #a33ede90), url('../images/image-header-mobile.jpg');
+    background-image: url('../images/image-header-mobile.jpg');
     background-size: cover;
+    background-color: var(--Soft-violet);
+    background-blend-mode: multiply;
     border-radius: 10px 10px 0 0;
+    opacity: 0.8;
     grid-area: imagen;
 }
 
@@ -111,6 +112,10 @@ span{
 
 
 @media (min-width: 900px){
+    .container{
+        height: 100vh;
+    }
+
     .card{
         width: 800px;
         grid-template-columns: 1fr 1fr;
@@ -120,7 +125,7 @@ span{
     }
 
     .card__img{
-        background-image: linear-gradient(#a33ede90, #a33ede90), url('../images/image-header-desktop.jpg');
+        background-image: url('../images/image-header-desktop.jpg');
         border-radius: 0 10px 10px 0;
     }
     
